@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartCart - Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div id="logo">
+          Smart<span>Cart</span><i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <nav id="navbar">
+          <ul>
+            <!-- Mobile Button -->
+            <li id="mobile-cross">
+              <a href="javascript:void(0)" onclick="closeMenu()"
+                ><i class="fa-solid fa-xmark"></i
+              ></a>
+            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#cata">Categories</a></li>
+            <li>
+              <a href="cart.html"
+                >My Cart <sup><span id="cartCount">0</span></sup></a
+              >
+            </li>
+            <li id="loginLink"><a href="login.html">Login</a></li>
+            <li><a href="#" onclick="openHelpModal()">Help & Support</a></li>
+          </ul>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <div id="mobile-bar" onclick="openMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+    </div>
+    <!-- Help & Support Modal -->
+    <div id="helpModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeHelpModal()">&times;</span>
+        <h2>How can we help you?</h2>
+        <ul>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#returns">Return Policy</a></li>
+          <li><a href="#track">Track Order</a></li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <section class="home-hero">
+        <div class="hero-content">
+          <h1>Welcome to SmartCart</h1>
+          <p>
+            Your one-stop destination for fashion, electronics, and more! Shop
+            from top categories with best offers just a click away.
+          </p>
+          <div class="hero-search">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search for products, categories and more..."
+              oninput="performSearch()"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="slider-container">
+        <div class="slides">
+          <img src="Banners/b-1.png" class="slide active" />
+          <img src="Banners/b-2.png" class="slide" />
+          <img src="Banners/b-3.png" class="slide" />
+          <img src="Banners/b-4.png" class="slide" />
+        </div>
+        <div class="dots-container">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <div id="cata">
+        <!-- Mens -->
+        <h2>Mens</h2>
+        <section class="category-list">
+          <div class="category-box">
+            <a href="category.html?cat=  tshirts">
+              <img src="M - Tshirts/t-0.jpg" alt="T-Shirts & Polos" />
+              <h3>T-Shirts & Polos</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=shirts">
+              <img src="M - Shirts/s-0.jpg" alt="Shirts" />
+              <h3>Shirts</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=jeans">
+              <img src="M - Jeans/mj-11.jpg" alt="Jeans & Trousers" />
+              <h3>Jeans & Trousers</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=ethnicwear">
+              <img src="Ethnic Wear/e-5.jpg" alt="Ethnic Wear" />
+              <h3>Ethnic Wear</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=mfootwear">
+              <img src="M - Footwear/mf-3.jpg" alt="Footwears" />
+              <h3>Footwears</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=watches">
+              <img src="M-Watches/ma-0.jpeg" alt="Watches" />
+              <h3>Watches & Accessories</h3>
+            </a>
+          </div>
+        </section>
+        <!-- Womens -->
+        <h2>Womens</h2>
+        <section class="category-list">
+          <div class="category-box">
+            <a href="category.html?cat=kurtis">
+              <img src="F - Kurti/fk-11.jpg" alt="" />
+              <h3>Kurtis</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=salwar">
+              <img src="F - Salwar Suits/ss-0.jpg" alt="" />
+              <h3>Salwar Suits</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=western">
+              <img src="F - Western Wear/ww-5.jpg" alt="" />
+              <h3>Western Wears</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=saree">
+              <img src="F - Saree/s-10.jpg" alt="" />
+              <h3>Sarees</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=lehengas">
+              <img src="F - Lehnga/l-0.jpg" alt="" />
+              <h3>Lehengas</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=sleepwear">
+              <img src="F - SleepWear/sw-13.jpg" alt="" />
+              <h3>Sleepwear</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=wfootwear">
+              <img src="F - Footwear/fw-0.jpg" alt="" />
+              <h3>Footwears</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=watch">
+              <img src="F - Watches/fw-0.jpg" alt="" />
+              <h3>Watches</h3>
+            </a>
+          </div>
+        </section>
+        <!-- Kids -->
+        <h2>Kids</h2>
+        <section class="category-list">
+          <div class="category-box">
+            <a href="category.html?cat=boys">
+              <img src="Boys Clothing/bc13.jpg" alt="" />
+              <h3>Boys Clothing</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=girls">
+              <img src="Girl Clothing/gc7.jpg" alt="" />
+              <h3>Girls Clothing</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=kfootwears">
+              <img src="Kids FootWear/kd14.jpg" alt="" />
+              <h3>Footwears</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=games">
+              <img src="Toys and Games/tg4.jpg" alt="" />
+              <h3>Toys & Games</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=lunch">
+              <img src="School Bag and Lunch/sl12.jpg" alt="" />
+              <h3>School Bags & Lunch Boxes</h3>
+            </a>
+          </div>
+        </section>
+
+        <!-- Electronics -->
+        <h2>Electronics Accessories</h2>
+        <section class="category-list">
+          <div class="category-box">
+            <a href="category.html?cat=mobiles">
+              <img src="Mobile/m-5.jpg" alt="" />
+              <h3>Mobile Phones</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=Laptops">
+              <img src="Laptop/p15.jpg" alt="" />
+              <h3>Laptop & Tablets</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=buds">
+              <img src="Earphones/e6.jpg" alt="" />
+              <h3>Headphones & Buds</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=smartwatches">
+              <img src="smartwatch/s1.jpg" alt="" />
+              <h3>Smartwatches & Fitness Bands</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=homeappliances">
+              <img src="Home apligns/h20.jpg" alt="" />
+              <h3>Home Appliances</h3>
+            </a>
+          </div>
+        </section>
+
+        <!-- Stationary -->
+        <h2>Stationary</h2>
+        <section class="category-list">
+          <div class="category-box">
+            <a href="category.html?cat=notebooks">
+              <img src="Notebook and Register/nb14.jpg" alt="" />
+              <h3>Notebooks & Registers</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=penspencils">
+              <img src="Pens and Pencils/pp4.jpg" alt="" />
+              <h3>Pens & Pencils</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=kschoolsupplies">
+              <img src="School Supplies/ss3.jpg" alt="" />
+              <h3>School Supplies</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=officesupplies">
+              <img src="Office Supplies/os15.jpg" alt="" />
+              <h3>Office Supplies</h3>
+            </a>
+          </div>
+          <div class="category-box">
+            <a href="category.html?cat=crafts">
+              <img src="Art and Craft/ac12.jpg" alt="" />
+              <h3>Art & Craft</h3>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content container">
+        <div class="footer-section">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Shipping Info</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Popular Categories</h4>
+          <ul>
+            <li><a href="#">Men's Clothing</a></li>
+            <li><a href="#">Women's Wear</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Stationery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#"
+                ><img
+                  src="Footer/facebook-brands-solid-full.svg"
+                  alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="Footer/instagram-brands-solid-full.svg"
+                  alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="Footer/twitter-brands-solid-full.svg"
+                  alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="Footer/youtube-brands-solid-full.svg"
+                  alt="YouTube"
+              /></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: tech9ox@gmail.com</p>
+          <p>Phone: 1800-300-7562</p>
+          <p>Mon–Sat: 9:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 SmartCart. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

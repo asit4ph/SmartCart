@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - SmartCart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
+   <div id="container">
+    <header>
+      <div id="logo">SmartCart</div>
+      <nav id="navbar">
+        <ul>
+          <!-- Mobile Button -->
+           <li id="mobile-cross"><a href="javascript:void(0)" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="cart.html">My Cart <sup><span  id= "cartCount">0</span></sup></a></li>
+          <li id="loginLink"><a href="login.html">Login</a></li>
+          <li><a href="#">Help & Support</a></li> 
+        </ul>
+      </nav>
+      <!-- Mobile Menu Button -->
+       <div id="mobile-bar" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    </div>
+ <!-- Help & Support Modal -->
+    <div id="helpModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeHelpModal()">&times;</span>
+        <h2>How can we help you?</h2>
+        <ul>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#returns">Return Policy</a></li>
+          <li><a href="#track">Track Order</a></li>
+        </ul>
+      </div>
+    </div>
+   
+    <main class="product-detail">
+      <div class="product-image">
+        <img id="productImage" src="" alt="Product Image" />
+      </div>
+      <div class="product-info">
+        <h1 id="productName">Product Name</h1>
+        <div class="price-box">
+          <p>
+            <del id="actualPrice">₹0</del>
+            <span id="discountPercent">(0% OFF)</span>
+          </p>
+          <h2 id="productPrice">₹0</h2>
+        </div>
+
+        <div class="rating-box">
+          <label>Rating:</label>
+          <span id="productRating">⭐ 0.0</span>
+        </div>
+        <p id="productDescription">Product description goes here...</p>
+        <div class="product-specs" id="productSpecs"></div>
+        <div class="action-buttons">
+          <button onclick="addToCart()">Add to Cart</button>
+          <button onclick="buyNow()">Buy Now</button>
+        </div>
+      </div>
+    </main>
+    <section class="recommendations">
+      <h3>You May Also Like</h3>
+      <div class="recommendation-list" id="recommendationList"></div>
+    </section>
+    <footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 SmartCart. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </div>
+</footer>
+
+    <script src="product.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

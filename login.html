@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartCart - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <div id="logo">SmartCart</div>
+      <nav id="navbar">
+        <ul>
+          <!-- Mobile Button -->
+           <li id="mobile-cross"><a href="javascript:void(0)" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="cart.html">My Cart <sup><span  id= "cartCount">0</span></sup></a></li>
+          <li id="loginLink"><a href="login.html">Login</a></li>
+          <li><a href="#">Help & Support</a></li> 
+        </ul>
+      </nav>
+      <!-- Mobile Menu Button -->
+       <div id="mobile-bar" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
+    </header>
+    </div>
+     <!-- Help & Support Modal -->
+    <div id="helpModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeHelpModal()">&times;</span>
+        <h2>How can we help you?</h2>
+        <ul>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#returns">Return Policy</a></li>
+          <li><a href="#track">Track Order</a></li>
+        </ul>
+      </div>
+    </div>
+   
+  <main class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="email">Email Id </label>
+      <input type="email" id="email" placeholder="Email" required />
+      <label for="email">Password </label>
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p id="errorMsg" class="error"></p>
+    </form>
+  </main>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const errorMsg = document.getElementById("errorMsg");
+
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!email || !password) {
+        errorMsg.textContent = "Please fill in both fields.";
+        return;
+      }
+
+      // Dummy login - save to localStorage
+      localStorage.setItem("loggedIn", "true");
+      localStorage.setItem("userEmail", email);
+      alert("Login successful!");
+      window.location.href = "index.html";
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
